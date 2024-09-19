@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Flask</title>
+</head>
+<body>
+    <h1>wlcome to flask {{ extra }}</h1>
+
+    <p>
+        {% if x % 2 == 0 %}
+        <span>Value of x is {{ x }} which is even</span>
+        {% else %}
+        <span>Value of x is {{ x }} which is odd</span> 
+        {% endif %}
+    </p>
+    <ul>
+    {% for lang in lang %}
+    <li>{{ lang }}</li>
+    {% endfor %}
+    </ul>
+</body>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</html>
